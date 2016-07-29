@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
              data + '\r\n' +
              '--' + boundary + '--';
 
-    xhr.open("POST", post_url + "/upload", true);
+    xhr.open("POST", post_url + "/upload?agent=browser", true);
     xhr.setRequestHeader("Content-type", "multipart/form-data; boundary="+boundary);
     xhr.addEventListener('load', function() {
       var data = JSON.parse(this.responseText);
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   var dz = new Dropzone(document.body, { // Make the whole body a dropzone
-    url: post_url + "/upload", // Set the url
+    url: post_url + "/upload?agent=browser", // Set the url
     paramName: "files[]",
     thumbnailWidth: 60,
     thumbnailHeight: 60,
