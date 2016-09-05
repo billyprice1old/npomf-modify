@@ -11,9 +11,9 @@ config.DB_FILENAME = './database.db';
 // Default: 100MB (100000000)
 config.MAX_UPLOAD_SIZE = 100000000;
 
-config.SITE_NAME = 'NPomf';
-config.HELLO = "Ohayō!";
-config.TAGLINE = "More kawaii than Pomf?!";
+config.SITE_NAME = 'Kuai Files';
+config.HELLO = "Upload with kuai";
+config.TAGLINE = "Oops! It's so kuai?!";
 config.DESCRIPTION = "Upload whatever you want here, as long as it's under "+
                      config.MAX_UPLOAD_SIZE/1000000 + "MB.<br/> "+
                      "Please read our <a href='/faq'>FAQ</a>, as we may "+
@@ -22,7 +22,7 @@ config.DESCRIPTION = "Upload whatever you want here, as long as it's under "+
 // Main URL (User-facing)
 // config.URL = 'http://my.domain.is.moe';
 // Used to have trailing / but trailing / is no longer supported.
-config.URL = 'http://localhost:3000';
+config.URL = 'https://up.kuai.us';
 // URL to access uploaded files
 // Different from URL if you're serving uploaded files from a different subdomain
 // If you serve from a different directory/subdomain this app won't be able
@@ -30,7 +30,7 @@ config.URL = 'http://localhost:3000';
 // for generating links to uploaded files.
 // config.FILE_URL = 'http://a.my.domain.is.moe';
 // Also used to have a trailing / but shouldn't any more!
-config.FILE_URL = 'http://localhost:3000/f';
+config.FILE_URL = 'https://bucket2.gslb.kuai.us/';
 
 // DO NOT TOUCH UNLESS YOU KNOW HOW TO PROPERLY CONFIGURE CORS
 // Changes the file upload form to POST to this URL instead of the one it's loaded from.
@@ -45,9 +45,9 @@ config.PORT = '3000';
 
 // Contact name & email, for contact page
 config.CONTACTS = [
-	"<b>A Shit</b><br/>"+
-	"<a href='mailto:my.waifu@is.shit'>my.waifu@is.shit</a><br/>"+
-	"<a href='http://twitter.com/shit_waifu'>@shit_waifu</a>",
+	"<b>with YJK</b><br/>"+
+	"<a href='mailto:go@kuai.us'>go@kuai.us</a><br/>"+
+	"<a href='https://yjk.im'>@tayuo</a>",
 	""
 ];
 
@@ -111,11 +111,11 @@ config.GITHUB_CLIENT_SECRET = null;
 // instead.
 // Documentation: https://github.com/expressjs/cookie-session#cookie-options
 config.SESSION_OPTIONS = {
-	name: 'kanri.session',
+	name: 'kuai.us',
 	keys: ['new key', 'old key in rotation'],
 	maxAge: (86400 * 1000), // 1 day (milliseconds)
 	secureProxy: false, // Should be true if you are proxying w/ nginx etc
-	domain: undefined // You should set this to your domain
+	domain: 'kuai.us' // You should set this to your domain
 }
 
 // Merge ENV in because we -hate- love RX14-chibi
